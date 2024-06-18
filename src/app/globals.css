@@ -4,22 +4,42 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 21, 11, 41;
+  --background-end-rgb: 18, 5, 13;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 23, 23, 23;
+    --background-end-rgb: 23, 23, 23;
   }
+}
+
+/* styles/globals.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.sidebar {
+  height: 90%
+}
+
+#root,
+#__next {
+  overflow: hidden;
+}
+
+.transact-card {
+  height: 18.8em;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
+      to right bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
