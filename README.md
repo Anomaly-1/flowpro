@@ -119,6 +119,8 @@ Once logged in, you will be taken to your dashboard where you can:
 - **Authentication**: JSON Web Tokens (JWT)
 - **API**: CryptoCompare API for cryptocurrency data
 
+> (and several additional smaller packages and frameworks)
+
 ## Contributing
 
 We welcome contributions from the community! Please follow these steps to contribute:

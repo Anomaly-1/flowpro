@@ -90,18 +90,18 @@ export default function SignUp() {
       });
 
       // Initialize subcollections
-      const transactionsRef = collection(db, 'users', user.uid, 'transactions');
-      const budgetsRef = collection(db, 'users', user.uid, 'budgets');
-      const categoriesRef = collection(db, 'users', user.uid, 'categories');
-      const stockRef = collection(db, 'users', user.uid, 'stocks');
+      // const transactionsRef = collection(db, 'users', user.uid, 'transactions');
+      // const budgetsRef = collection(db, 'users', user.uid, 'budgets');
+      // const assetsRef = collection(db, 'users', user.uid, 'assets');
+      // const stockRef = collection(db, 'users', user.uid, 'stocks');
 
       // Add a sample document to initialize the subcollections
-      await setDoc(doc(transactionsRef, 'init'), {});
-      await setDoc(doc(budgetsRef, 'init'), {});
-      await setDoc(doc(categoriesRef, 'init'), {});
-      await setDoc(doc(stockRef, 'init'), {});
+      // await setDoc(doc(transactionsRef, 'init'), {});
+      // await setDoc(doc(budgetsRef, 'init'), {});
+      // await setDoc(doc(assetsRef, 'init'), {});
+      // await setDoc(doc(stockRef, 'init'), {});
 
-      console.log('User registered and subcollections initialized successfully');
+      console.log('User registered successfully');
 
       await signInWithEmailAndPassword(auth, email, password);
       // Get the ID token from Firebase

@@ -27,7 +27,8 @@ export default function Sidebar() {
       if (auth.currentUser) {
         const userDoc = await getDoc(doc(db, "users", auth.currentUser.uid));
         if (userDoc.exists()) {
-          setUser(userDoc.data());
+          const userdat : any = userDoc.data()
+          setUser(userdat);
         }
       }
     };
@@ -38,6 +39,7 @@ export default function Sidebar() {
 
   const handleLogout = async () => {
     await signOut(auth)
+    const router = useRouter()
     router.push('/login');
   };
 
@@ -56,9 +58,9 @@ export default function Sidebar() {
           />
         </CardHeader>
         <CardBody className="w-64 h-full bg-black text-white">
-          {user && user.firstName && (
+          {user && (user as any).firstName && (
             <h3 className="text-xl w-full text-white mt-2 text-center">
-              Welcome {user.firstName[0].toUpperCase() + user.firstName.substring(1)}
+              Welcome {(user as any).firstName[0].toUpperCase() + (user as any).firstName.substring(1)}
             </h3>
           )}
           <div className="flex-grow">
