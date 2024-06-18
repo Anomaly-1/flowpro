@@ -74,7 +74,7 @@ export default function Home() {
         
 
         // Sort transactions by timestamp
-        transactions.sort((a : any, b : any) => new Date(b.timestamp) - new Date(a.timestamp));
+        transactions.sort((a: any, b: any) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
 
         setTransactionData(transactions);
 
@@ -90,7 +90,7 @@ export default function Home() {
         const lastLastMonth = (currentMonth - 2 + 12) % 12;
         const nextMonth = (currentMonth + 1) % 12;
 
-        transactions.forEach(transaction => {
+        transactions.forEach((transaction : any) => {
           const { amount, type, category, timestamp } = transaction;
           const date = new Date(timestamp);
           const month = date.getMonth();
@@ -146,7 +146,7 @@ export default function Home() {
         const assetPrices = assets.map(asset => asset.price);
         const assetNames = assets.map(asset => asset.name);
 
-        const categoryAmounts = categories.map(category => categoryTotals[category]);
+        const categoryAmounts = categories.map((category : any)=> categoryTotals[category]);
 
         const filteredNetWorth = [
           cumulativeNetWorth[lastLastMonth],

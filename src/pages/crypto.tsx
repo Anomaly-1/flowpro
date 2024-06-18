@@ -201,7 +201,7 @@ export default function Crypto() {
                 className="bg-black text-white"
               >
                 {Object.entries(intervalOptions).map(([key, value]) => (
-                  <SelectItem key={key} className="text-white bg-black" value={key}>{value}</SelectItem>
+                  <SelectItem key={key} className="text-white bg-black" value={key}>{value as any}</SelectItem>
                 ))}
               </Select>
               <Select
@@ -212,7 +212,7 @@ export default function Crypto() {
                 className="bg-black text-white"
               >
                 {Object.entries(currencyOptions).map(([key, value]) => (
-                  <SelectItem key={key} className="text-white bg-black" value={key}>{value}</SelectItem>
+                  <SelectItem key={key} className="text-white bg-black" value={key}>{value as any}</SelectItem>
                 ))}
               </Select>
               <Input
